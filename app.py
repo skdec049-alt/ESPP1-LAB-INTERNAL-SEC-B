@@ -55,7 +55,7 @@ def main():
         # Comparison logic for peace of mind
         if roll_no > 1:
             prev_numbers = data_map[roll_no - 1]
-            st.info(f"Note: These numbers are 100% different from Roll No {roll_no-1}.")
+            
 
 if __name__ == "__main__":
     main()
