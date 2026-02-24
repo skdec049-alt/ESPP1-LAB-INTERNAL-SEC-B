@@ -1,7 +1,7 @@
 import streamlit as st
 import random
 
-def get_unique_sequences(total_rolls=60):
+def get_unique_sequences(total_rolls=52):
     """
     Generates a list of 5-number sequences for each roll number 
     ensuring no adjacent roll numbers share a value.
@@ -31,16 +31,16 @@ def main():
     st.set_page_config(page_title="Roll Number Portal", layout="centered")
     st.title("🔢 SELECT PROGRAM NO")
     
-    # Restrict input between 1 and 60
+    # Restrict input between 1 and 52
     roll_no = st.number_input(
-        "Enter Roll Number (50-110)", 
-        min_value=50, 
-        max_value=110, 
+        "Enter Roll Number (01-52)", 
+        min_value=1, 
+        max_value=52, 
         step=1
     )
 
     # Pre-calculate the non-overlapping map
-    data_map = get_unique_sequences(110)
+    data_map = get_unique_sequences(52)
 
     if st.button("View My Numbers"):
         my_numbers = data_map[roll_no]
