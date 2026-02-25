@@ -31,11 +31,11 @@ def main():
     st.set_page_config(page_title="Roll Number Portal", layout="centered")
     st.title("🔢 SELECT PROGRAM NO")
     
-    # Restrict input between 1 and 52
+    # Restrict input between 52 and 110
     roll_no = st.number_input(
-        "Enter Roll Number (01-52)", 
-        min_value=1, 
-        max_value=52, 
+        "Enter Roll Number (52-110)", 
+        min_value=52, 
+        max_value=110, 
         step=1
     )
 
